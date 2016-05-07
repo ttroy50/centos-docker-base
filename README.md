@@ -24,7 +24,7 @@ From this folder call docker build on the Dockerfile.
 
     docker build --rm -f c6.3base.dockerfile -t matrim/centos6.3:latest .
 
-This will create the image called matrim:CentOS6.3
+This image is available from https://hub.docker.com/r/matrim/centos6.3/
 
 
 

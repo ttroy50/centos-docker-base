@@ -8,9 +8,9 @@ Modified from https://github.com/blalor/docker-centos-base
 
 Building of the rootfs can only happen on a CentOS6.3 OS. 
 
-After installing the OS, install febootstrap
+After installing the OS, install febootstrap and xz
 
-    yum install febootstrap
+    yum install febootstrap xz
 
 Then run the build_centos_63.sh to generate the centos63.tar.xz file.
 

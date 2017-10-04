@@ -7,8 +7,9 @@ set -e
 ## doesn't exist.
 [ $( id -u ) -eq 0 ] || { echo "must be root"; exit 1; }
 
-OS=`lsb_release -is`
-VER=`lsb_release -rs`
+sys=($(cat /etc/issue | head -1))
+OS=${sys[0]}
+VER=${sys[2]}
 
 if [ "$OS" != "CentOS" ]; then
     echo "Needs to be run on CentOS"

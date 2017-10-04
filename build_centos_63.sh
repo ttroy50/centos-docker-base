@@ -7,7 +7,12 @@ set -e
 ## doesn't exist.
 [ $( id -u ) -eq 0 ] || { echo "must be root"; exit 1; }
 
-sys=($(cat /etc/issue | head -1))
+if [ ! -f /etc/redhat-release ]; then
+    echo "Needs to be run on CentOS";
+    exit 1
+fi
+
+sys=($(cat /etc/redhat-release | head -1))
 OS=${sys[0]}
 VER=${sys[2]}
 
